@@ -2,11 +2,7 @@
 using Rocket.Unturned.Chat;
 using Rocket.Unturned.Player;
 using Rocket.Unturned.Skills;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Skills
 {
@@ -43,6 +39,12 @@ namespace Skills
 
             if (parameters.Length == 2)
             {
+                if (player is ConsolePlayer)
+                {
+                    UnturnedChat.Say(player, Skills.Instance.Translate("console_must_specify_player"), UnityEngine.Color.red);
+                    return;
+                }
+
                 target = (UnturnedPlayer)player;
             }
             else
@@ -81,7 +83,7 @@ namespace Skills
             }
 
             Skills.SetSkill(target, skill, level);
-            UnturnedChat.Say(player, Skills.Instance.Translate("skill_success"), UnityEngine.Color.red);
+            UnturnedChat.Say(player, Skills.Instance.Translate("skill_success"));
         }
     }
 }
