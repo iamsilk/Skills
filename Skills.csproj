@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>lib\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Rocket.API">
       <HintPath>lib\Rocket.API.dll</HintPath>
@@ -58,6 +59,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandZeroSkills.cs" />
+    <Compile Include="CommandMaxSkills.cs" />
     <Compile Include="CommandSkill.cs" />
     <Compile Include="Skills.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
