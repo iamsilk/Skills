@@ -55,6 +55,7 @@ namespace Skills
             }
 
             Skills.GiveMaxSkills(target);
+            UnturnedChat.Say(player, Skills.Instance.Translate("maxskills_success"));
         }
     }
 }
