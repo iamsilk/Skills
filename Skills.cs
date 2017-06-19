@@ -1,12 +1,7 @@
-﻿using Rocket.Core.Plugins;
+﻿using Rocket.API.Collections;
+using Rocket.Core.Plugins;
 using Rocket.Unturned.Player;
 using Rocket.Unturned.Skills;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Rocket.API.Collections;
 
 namespace Skills
 {
@@ -122,6 +117,7 @@ namespace Skills
             { "unknown_skill", "The specified skill does not exist." },
             { "invalid_level", "The specified level is invalid." },
 
+            { "console_must_specify_player", "Console must specify a player to set skills for." },
             { "player_not_found", "Cannot find the specified player." },
             { "no_permission", "You do not have permission to do this." },
             { "invalid_parameters", "Invalid parameters." },
