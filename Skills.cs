@@ -104,6 +104,35 @@ namespace Skills
             player.SetSkillLevel(skill, level);
         }
 
+        public static void SetAllSkills(UnturnedPlayer player, byte level)
+        {
+            SetSkill(player, UnturnedSkill.Overkill, level);
+            SetSkill(player, UnturnedSkill.Sharpshooter, level);
+            SetSkill(player, UnturnedSkill.Dexerity, level);
+            SetSkill(player, UnturnedSkill.Cardio, level);
+            SetSkill(player, UnturnedSkill.Exercise, level);
+            SetSkill(player, UnturnedSkill.Diving, level);
+            SetSkill(player, UnturnedSkill.Parkour, level);
+
+            SetSkill(player, UnturnedSkill.Sneakybeaky, level);
+            SetSkill(player, UnturnedSkill.Vitality, level);
+            SetSkill(player, UnturnedSkill.Immunity, level);
+            SetSkill(player, UnturnedSkill.Toughness, level);
+            SetSkill(player, UnturnedSkill.Strength, level);
+            SetSkill(player, UnturnedSkill.Warmblooded, level);
+            SetSkill(player, UnturnedSkill.Survival, level);
+
+            SetSkill(player, UnturnedSkill.Healing, level);
+            SetSkill(player, UnturnedSkill.Crafting, level);
+            SetSkill(player, UnturnedSkill.Outdoors, level);
+            SetSkill(player, UnturnedSkill.Cooking, level);
+            SetSkill(player, UnturnedSkill.Fishing, level);
+            SetSkill(player, UnturnedSkill.Agriculture, level);
+            SetSkill(player, UnturnedSkill.Mechanic, level);
+            SetSkill(player, UnturnedSkill.Engineer, level);
+
+        }
+
         public override TranslationList DefaultTranslations => new TranslationList()
         {
             { "command_skill_help", "/skill [player] <skill> <level | max> - Modify your own or someone else's skill." },
