@@ -2,6 +2,7 @@
 using Rocket.Core.Plugins;
 using Rocket.Unturned.Player;
 using Rocket.Unturned.Skills;
+using Logger = Rocket.Core.Logging.Logger;
 
 namespace Skills
 {
@@ -12,6 +13,13 @@ namespace Skills
         protected override void Load()
         {
             Instance = this;
+            Logger.Log("Skills has been loaded!");
+        }
+
+        protected override void Unload()
+        {
+            Instance = null;
+            Logger.Log("Skills has been unloaded!");
         }
 
         public static UnturnedSkill GetSkill(string skill)
